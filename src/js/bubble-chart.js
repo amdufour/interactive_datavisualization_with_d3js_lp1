@@ -112,7 +112,9 @@ const createBubbleChart = (data) => {
 
   const circlesGroup = areaLegendCircles
     .append('g')
-      .attr('class', 'circles-group');
+      .attr('class', 'circles-group')
+      .attr('fill', '#727a87')
+      .attr('fill-opacity', 0.4);
   circlesGroup
     .append('circle')
       .attr('cx', Math.sqrt(bubblesAreaScale(1.5) / Math.PI))
