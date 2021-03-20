@@ -1,0 +1,32 @@
+#legend {
+  margin-left: 50px;
+  ul {
+    margin: 10px 0;
+    padding-left: 0;
+    list-style: none;
+    li {
+      display: flex;
+      margin: 5px 0;
+      font-size: 1.4rem;
+      span {
+        flex-shrink: 0;
+      }
+    }
+  }
+  .legend-circle {
+    margin-top: 4px;
+    margin-right: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .legend-area {
+    h4 {
+      margin-bottom: 10px;
+    }
+    circle {
+      fill: #727a87;
+      opacity: 0.4;
+    }
+  }
+}

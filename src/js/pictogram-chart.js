@@ -3,6 +3,7 @@ d3.csv('../data/total_abum_by_format.csv').then(data => {
   createPictogramChart(data);
 });
 
+// Create and append the chart
 const createPictogramChart = (dataPict) => {
   const formats = ['physical_album', 'digital_album', 'digital_track', 'on_demand_audio_streams', 'on_demand_video_streams'];
 
@@ -28,10 +29,10 @@ const createPictogramChart = (dataPict) => {
     .join('li');
   legendItems
     .append('span')
+      .attr('class', d => `legend-circle legend-circle-${d}`)
       .style('background-color', (d, i) => {
         return d3.schemeSet2[i]; // Use a categorical color scheme from d3-scale-chromatic (https://github.com/d3/d3-scale-chromatic)
-      })
-      .attr('class', d => `legend-circle legend-circle-${d}`);
+      });
   legendItems
     .append('span')
       .attr('class', 'legend-label')
@@ -58,7 +59,7 @@ const createPictogramChart = (dataPict) => {
   // Append svg
   const pictWidth = 120;
   const pictHeight = 120;
-  pictChart = pictSection
+  const pictChart = pictSection
     .append('svg')
       .attr('viewbox', [0, 0, pictWidth, pictHeight])
       .attr('width', pictWidth)

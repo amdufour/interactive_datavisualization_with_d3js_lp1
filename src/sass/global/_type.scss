@@ -4,12 +4,25 @@ $fontPrimary: 'Lato', sans-serif;
 $fontSize: 1.6rem;
 
 h1 {
-  margin: 0 0 40px;
+  margin: 60px 0 20px;
   font-size: 4.5rem;
   font-weight: 700;
 }
 h2 {
-  margin: 0 0 20px;
+  margin: 60px 0 20px;
   font-size: 3.5rem;
   font-weight: 700;
+}
+h3 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+h4 {
+  margin: 0 0 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+a {
+  color: $text;
 }
