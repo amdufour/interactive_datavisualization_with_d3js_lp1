@@ -66,7 +66,7 @@ const createBubbleChart = (data) => {
   // Bubbles
   const bubblesAreaScale = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.album_sales_millions)])
-    .range([50, 2000]);
+    .range([0, 2000]);
   const colorScale = d3.scaleOrdinal()
     .domain(artists)
     .range(d3.schemeTableau10);

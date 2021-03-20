@@ -135,11 +135,10 @@ const circlesChartGroup = circlesChart
 // The data is now bount to each group and we can append them shapes and labels
 // First, the circles, for which we will need a scale
 // Circles should always be sized based on their area, not their radius!
-const radiusMin = 25;
 const radiusMax = 40;
 const circlesScale = d3.scaleLinear()
-    .domain([d3.min(topRockSongs, d => d.sales_and_streams), d3.max(topRockSongs, d => d.sales_and_streams)])
-    .range([Math.PI * Math.pow(radiusMin, 2), Math.PI * Math.pow(radiusMax, 2)]);
+    .domain([0, d3.max(topRockSongs, d => d.sales_and_streams)])
+    .range([0, Math.PI * Math.pow(radiusMax, 2)]);
 
 // We can now append circles
 const circlesPadding = 15;
